@@ -1,0 +1,28 @@
+let ws = new WebSocket('wss://stream.binance.com:9443/ws/etheur@trade');
+let stockPriceElement = document.getElementById('stock-price');
+let lastPrice = null;
+let price1 = null;
+let price2 = null;
+let price3 = null;
+let price4 = null;
+let price5 = null;
+let prices = [null,null,null,null,null];
+let ind =-1;
+ws.onmessage = (event) =>{
+ 
+    let stockObject = JSON.parse(event.data);
+    let price = parseFloat(stockObject.p).toFixed(2);
+    stockPriceElement.innerText = price;
+
+    stockPriceElement.style.color = !lastPrice || lastPrice === price ? 'black' : price>lastPrice ? 'green' : 'red';
+
+    ind++;
+        prices[ind]=price
+        if(ind>29){
+            ind=0;
+        }
+
+      
+      
+    lastPrice = price;
+}
