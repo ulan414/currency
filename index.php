@@ -79,6 +79,8 @@ $id = $_GET['id'];
             
     // do stuff
     </script>
+        <? if($id == 1 || is_null($id)){?>
+        <!--styles for BTC-->
         <style>
             .price{
                 font-family: Calibri, 'Trebuchet MS';
@@ -94,8 +96,70 @@ $id = $_GET['id'];
                 background-color:red;
             }
             .current{
-                font-size:50px;
+                font-size:50px; 
             }
                 </style>
+<?php }else if($id == 2){?>
+        <!--styles for ETH-->
+        <style>
+            .price{
+                font-family: Calibri, 'Trebuchet MS';
+            }
+            body{
+                background-color: #77FFF5;
+            }
+            .cur{
+                float:left;
+                margin-left: 20px;
+            }
+            .curbtc{
+                background-color:red;
+            }
+            .current{
+                font-size:50px; 
+            }
+                </style>
+<?php }else if($id == 3){?>
+            <!--styles for DOGECOIN-->
+            <style>
+            .price{
+                font-family: Calibri, 'Trebuchet MS';
+            }
+            body{
+                background-color: #77FFF5;
+            }
+            .cur{
+                float:left;
+                margin-left: 20px;
+            }
+            .curbtc{
+                background-color:red;
+            }
+            .current{
+                font-size:50px; 
+            }
+                </style>
+<?php }else if($id == 4){?>
+            <!--styles for BNB-->
+            <style>
+            .price{
+                font-family: Calibri, 'Trebuchet MS';
+            }
+            body{
+                background-color: #77FFF5;
+            }
+            .cur{
+                float:left;
+                margin-left: 20px;
+            }
+            .curbtc{
+                background-color:red;
+            }
+            .current{
+                font-size:50px; 
+            }
+                </style>
+    <? } ?>
+        
 </body>
 </html>
