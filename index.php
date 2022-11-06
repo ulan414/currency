@@ -79,7 +79,7 @@ $id = $_GET['id'];
             
     // do stuff
     </script>
-        <? if($id == 1 || is_null($id)){?>
+        <?php if($id == 1 || is_null($id)){ ?>
         <!--styles for BTC-->
         <style>
             .price{
@@ -99,7 +99,7 @@ $id = $_GET['id'];
                 font-size:50px; 
             }
                 </style>
-<?php }else if($id == 2){?>
+<?php }else if($id == 2){ ?>
         <!--styles for ETH-->
         <style>
             .price{
@@ -119,7 +119,7 @@ $id = $_GET['id'];
                 font-size:50px; 
             }
                 </style>
-<?php }else if($id == 3){?>
+<?php }else if($id == 3){ ?>
             <!--styles for DOGECOIN-->
             <style>
             .price{
@@ -139,7 +139,7 @@ $id = $_GET['id'];
                 font-size:50px; 
             }
                 </style>
-<?php }else if($id == 4){?>
+<?php }else if($id == 4){ ?>
             <!--styles for BNB-->
             <style>
             .price{
@@ -159,7 +159,7 @@ $id = $_GET['id'];
                 font-size:50px; 
             }
                 </style>
-    <? } ?>
+    <?php } ?>
         
 </body>
 </html>
